@@ -89,6 +89,11 @@ def multiply(num1, num2):
   result = num1 * num2
   return str(result)
 
+@app.route("/divide/<int:num1>/<int:num2>")
+def divide(num1, num2):
+  result = num1 / num2
+  return str(result)
+
 @app.route("/subreddit/<string:subreddit>/<string:user_id>", methods = ['POST', 'PUT'])
 def create_subreddit(user_id, subreddit):
     data = request.form
